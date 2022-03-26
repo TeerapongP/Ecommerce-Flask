@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"  type="text/css" href="{{url_for('static',filename='signin.css')}}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body style="background-image: url('../static/images/bg-manga-dar.png');">
+    {%block content%}
+    <main>
+        <div class="singin-border">
+            <img src="{{url_for('static',filename='../static/images/BG-IMG.png')}}" alt="">
+            <div class="text-signin">
+                <h1>SIGN IN</h1>
+            </div>
+            <form method="POST">
+                <div class="login">
+                    <p1>Email</p1>
+                    <input type="email" id="email" name="email" value="example@gmail.com" required>
+                    <p2>Password</p2>
+                    <input type="password" id="email" name="password" value="*************" required>
+                </div>
+            </form>
+            <form method="GET">
+                <input class="btn-login" type="button" value="SIGNIN"> 
+            </form>
+            <div class="line"></div>
+            <p3>Do not have account ?</p3>
+            <p4>Forgot Password ? </p4>
+            <form action="">
+                <input class="btn-signup" type="button" value="JOIN NOW"> 
+            </form>
+        </div>
+       
+    </main>
+    {%endblock%}
+</body>
+</html>

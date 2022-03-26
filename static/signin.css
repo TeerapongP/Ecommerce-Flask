@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;    
+}
+@media screen and (max-width: 800px) {
+    .right,.left,.singin-border,.text-signin{
+      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+}
+
+.singin-border{
+    position: fixed;
+    height: 600px;
+    left: 404px;
+    right: 406px;
+    top: calc(50% - 573px/2 - 24.5px);
+
+    background: #1D2837;
+    border: 15px solid #F0F0F0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+.singin-border img{
+    position: fixed;
+    height: 573px;
+    border-radius: 15px;
+}
+.text-signin h1{
+    position: fixed;
+    top: 230px;
+    left: 1028px;
+    color: #F0F0F0;
+}
+.login p1{
+    position: fixed;
+    left: 1035px;
+    top: 300px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 10px;
+    /* identical to box height */
+    text-align: center;
+    color: #FFFFFF;
+}
+.login p2{
+    position: fixed;
+    left: 1035px;
+    top: 390px;
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 10px;
+    /* identical to box height */
+    text-align: center;
+    color: #FFFFFF;
+}
+input[type=email]{
+    position: fixed;
+    height: 40px;
+    left: 1035px;
+    right: 548px;
+    top: 330px;
+
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 15px;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+input[type=password]{
+    position: fixed;
+    height: 40px;
+    left: 1035px;
+    right: 548px;
+    top: 420px;
+
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 15px;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+.btn-login{
+    position: fixed;
+    height: 35px;
+    top: 498px;
+    left: 1035px;
+    right: 788px;
+
+    border: none;
+    background: #01BFA4;
+    border-radius: 5px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+.line{
+    position: fixed;
+    left: 1035px;
+    right: 545px;
+    top: 602px;
+
+    border: 2px solid #FFFFFF;
+}
+.singin-border p3{
+    position: fixed;
+    top: 618px;
+    left: 1035px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 17px;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+.singin-border p4{
+    position: fixed;
+
+    top: 549px;
+    left: 1035px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 17px;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+.btn-signup{
+    position: fixed;
+    height: 35px;
+    left: 1271px;
+    right: 548px;
+    top: 612px;
+
+    border: none;
+    background: #01BFA4;
+    border-radius: 5px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
