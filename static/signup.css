@@ -3,12 +3,12 @@
     padding: 0;    
 }
 @media screen and (max-width: 800px) {
-    .right,.left,.singin-border,.text-signin{
+    .right,.left,.signup-border,.text-signup{
       width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
     }
 }
 
-.singin-border{
+.signup-border{
     position: fixed;
     height: 573px;
     left: 404px;
@@ -20,12 +20,12 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
 }
-.singin-border img{
+.signup-border img{
     position: fixed;
     height: 573px;
     border-radius: 15px;
 }
-.text-signin h1{
+.text-signup h1{
     position: fixed;
     top: 230px;
     left: 1028px;
@@ -119,7 +119,7 @@ input[type=password]{
 
     border: 2px solid #FFFFFF;
 }
-.singin-border p3{
+.signup-border p3{
     position: fixed;
     top: 618px;
     left: 1035px;
@@ -130,7 +130,7 @@ input[type=password]{
     /* identical to box height */
     color: #FFFFFF;
 }
-.singin-border p4{
+.signup-border p4{
     position: fixed;
 
     top: 549px;
