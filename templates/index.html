@@ -1,0 +1,51 @@
+
+{% extends 'base.html' %}
+    
+{% block content %}
+    
+    <div class="product-slider">
+        <img class="slider1" src="{{url_for('static',filename='../static/images/index/slider.png')}}">
+        <img class="slider2" src="{{url_for('static',filename='../static/images/index/slider2.png')}}">
+        <img class="slider3" src="{{url_for('static',filename='../static/images/index/slider3.png')}}">
+    </div>
+
+    <div class="img-product-all">
+        <div class="product-1">
+            <img src="{{url_for('static',filename='../static/images/index/pd1.png')}}">
+            <div class="box-text-1">
+                <p>สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 21</p>
+            </div>
+        </div>
+        <div class="product-2">
+            <img src="{{url_for('static',filename='../static/images/index/pd2.png')}}">
+            <div class="box-text-2">
+                <p>สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 20</p>
+            </div>
+        </div>
+        <div class="product-3">
+            <img src="{{url_for('static',filename='../static/images/index/pd3.png')}}">
+            <div class="box-text-3">
+                <p>สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 19</p>
+            </div>
+        </div>
+        <div class="product-4">
+            <img src="{{url_for('static',filename='../static/images/index/pd4.png')}}">
+            <div class="box-text-4">
+                <p>สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 18</p>
+            </div>
+        </div>
+        <div class="product-5">
+            <img src="{{url_for('static',filename='../static/images/index/pd5.png')}}">
+            <div class="box-text-5">
+                <p>สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 17</p>
+            </div>
+        </div>
+        <div class="product-6">
+            <img src="{{url_for('static',filename='../static/images/index/pd6.png')}}">
+            <div class="box-text-6">
+                <p>สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 16</p>
+            </div>
+        </div>
+    </div>
+   
+{% endblock %}

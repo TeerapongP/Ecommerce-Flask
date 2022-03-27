@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+@media screen and (max-width: 800px) {
+    *{
+      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+}
+.border-nav{
+    position:fixed;
+    height: 80px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    
+    background: #1D2837;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.logo img{
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.text-name p{
+    position: fixed;
+    left: 106px;
+    top: 15px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 40px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.search-bar input[type="text"]{
+    position: absolute;
+    height: 40px;
+    top: 20px;
+    left: 810px;
+    right: 810px;
+    border: none;
+    border-radius: 10px;
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.img-user{
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    left: 1631px;
+    top: 5px;
+}
+.sign-in-text{
+    position: fixed;
+    height: 24px;
+    left: 1701px;
+    right: 0px;
+    top: 27px;
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+.navbar-seconds{
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 35%;
+    width: 1920px;
+    height: 60px;
+    left: 0px;
+    top: 80px;
+    list-style: none;
+    text-align: center;
+    background: #85A7C0;
+
+
+}
+li{
+    display: inline-block;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    /* identical to box height */
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}

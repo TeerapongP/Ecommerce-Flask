@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet"  type="text/css" href="{{url_for('static',filename='css/base.css')}}">
+    <link rel="stylesheet"  type="text/css" href="{{url_for('static',filename='css/index.css')}}">
+    
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="border-nav">
+            <div class="logo">
+                <img src="{{url_for('static',filename='../static/images/logo.jpg')}}" alt="">
+            </div>
+            <div class="text-name">
+                <p>Manga Shop Online</p>
+            </div>
+            <div class="search-bar">
+                 <input type="text" id="search" name="search" value="Search" >
+            </div>
+            <img class="img-user" src="{{url_for('static',filename='../static/images/user.png')}}" alt="">
+            <div class="sign-in-text">
+                <p>SIGN IN / SIGN UP</p>
+            </div>
+        </div>
+        
+    </div>
+    <div class="navbar-seconds" >
+        <li>หน้าแรก</li>
+        <li>ขายดี</li>
+        <li>มาใหม่</li>
+        <li>โปรโมชั่น</li>
+        <li>แนะนำ</li>
+    </div>
+    <br><br><br><br>
+    {% block content %}
+
+    {% endblock %}
+    
+</body>
+    
+
+</html>
