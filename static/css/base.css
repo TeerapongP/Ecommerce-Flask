@@ -10,7 +10,11 @@
       width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
     }
 }
+.navbar{
+    z-index: 10;
+}
 .border-nav{
+    z-index: 9;
     position:fixed;
     height: 80px;
     left: 0px;
@@ -95,6 +99,7 @@
 }
 .navbar-seconds{
     position: fixed;
+    z-index: 10;
     display: flex;
     justify-content: space-around;
     padding: 30px 35%;

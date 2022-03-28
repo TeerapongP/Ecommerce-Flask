@@ -2,7 +2,10 @@
 {% extends 'base.html' %}
     
 {% block content %}
-    
+
+<head>
+    <link rel="stylesheet"  type="text/css" href="{{url_for('static',filename='css/index.css')}}">
+</head>
     <div class="product-slider">
         <img class="slider1" src="{{url_for('static',filename='../static/images/index/slider.png')}}">
         <img class="slider2" src="{{url_for('static',filename='../static/images/index/slider2.png')}}">
@@ -58,6 +61,18 @@
                 <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
             </div>
         </div>
+        <footer>
+            <div class="text-page">
+                <p>หน้าที่ 1</p>
+            </div>
+            <div class="img-arrow-right">
+                <a href="{{ url_for('manga_best_seller') }}">
+                    <img src="{{url_for('static',filename='../static/images/index/arrow-right.png')}}">
+                </a>
+            </div>
+            <div class="img-arrow-left">
+                <img src="{{url_for('static',filename='../static/images/index/arrow-left.png')}}">
+            </div>
+        </footer>
     </div>
-   
 {% endblock %}
