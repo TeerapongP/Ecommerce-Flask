@@ -17,6 +17,7 @@ app.config['MYSQL_DB'] = 'bookstore'
 
 mysql = MySQL(app)
 
+
 @app.route("/index")
 def index():
   return render_template('index.html')
@@ -29,6 +30,22 @@ def signout():
 @app.route("/manga_best_seller")
 def manga_best_seller():
   return render_template('manga_best_seller.html')
+
+@app.route("/manga_new")
+def manga_new():
+  return render_template('manga_new.html')
+
+@app.route("/manga_promotions")
+def manga_promotions():
+  return render_template('manga_promotions.html')
+
+@app.route("/promotions")
+def promotions():
+  return render_template('promotions.html')
+
+@app.route("/manga_introduce")
+def manga_introduce():
+  return render_template('manga_introduce.html')
 
 @app.route("/signin")
 def signin():

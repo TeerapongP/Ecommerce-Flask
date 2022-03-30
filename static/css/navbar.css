@@ -82,7 +82,7 @@
 .navbar-seconds{
     position: fixed;
     z-index: 10;
-    display: flex;
+    display:flex;
     justify-content: space-around;
     padding: 30px 35%;
     width: 1920px;
@@ -93,19 +93,17 @@
     text-align: center;
     background: #85A7C0;
 
-
 }
 li{
-    display: inline-block;
+    top: 20px;
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 24px;
     /* identical to box height */
-    
-    display: flex;
     align-items: center;
     text-align: center;
 
     color: #FFFFFF;
 }
+a:link { text-decoration: none; }

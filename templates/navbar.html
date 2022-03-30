@@ -28,11 +28,21 @@
         
     </div>
     <div class="navbar-seconds" >
+        <a href="{{ url_for('index') }}">
         <li>หน้าแรก</li>
+        </a>
+        <a href="{{ url_for('manga_best_seller') }}">
         <li>ขายดี</li>
-        <li>มาใหม่</li>
-        <li>โปรโมชั่น</li>
-        <li>แนะนำ</li>
+        </a>
+        <a href="{{ url_for('manga_new') }}">
+            <li>มาใหม่</li>
+        </a>
+        <a href="{{ url_for('manga_promotions') }}">
+            <li>โปรโมชั่น</li>
+        </a>
+        <a href="{{ url_for('manga_introduce') }}">
+            <li>แนะนำ</li>
+        </a>
     </div> 
     <br><br><br><br>
     {% block content %}
