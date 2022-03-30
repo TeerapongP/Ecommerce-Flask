@@ -21,10 +21,10 @@ mysql = MySQL(app)
 def index():
   return render_template('index.html')
 
-@app.route("/signout", methods=['POST'])
+@app.route("/signout")
 def signout():
   session.pop('username',None)
-  return render_template('index.html')
+  return redirect('signin')
 
 @app.route("/manga_best_seller")
 def manga_best_seller():
@@ -37,11 +37,11 @@ def signin():
 @app.route("/submit", methods=['POST'])
 def submit():
   cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-  if request.method == 'POST' and 'inputUsername' in request.form and 'inputPassword' in request.form:
-    _username = request.form['inputUsername']
+  if request.method == 'POST' and 'inputEmail' in request.form and 'inputPassword' in request.form:
+    _email = request.form['inputEmail']
     _password = request.form['inputPassword']
-
-    cursor.execute('SELECT * FROM user_signin_signup WHERE username = %s', (_username,))
+ 
+    cursor.execute('SELECT * FROM user_signin_signup WHERE email = %s', (_email,))
     account = cursor.fetchone()
 
     if account:
@@ -86,7 +86,7 @@ def signup():
       cursor.execute(''' INSERT INTO user_signin_signup VALUES(NULL,%s,%s,%s)''',(email_,username,_hashed_password))
       mysql.connection.commit()
       msg = 'You have successfully registered !'
-      return redirect(url_for('index'))
+      return redirect(url_for('signin'))
   elif request.method == 'POST':
       msg = 'Please fill out the form !'
 

@@ -11,21 +11,21 @@
         <img class="slider2" src="{{url_for('static',filename='../static/images/index/slider2.png')}}">
         <img class="slider3" src="{{url_for('static',filename='../static/images/index/slider3.png')}}">
     </div>
-    {% if loggedin in session: %}
+    {% if 'loggedin' in session: %}
     <div class="sign-in-text">
-        <p>{{ session['username']}}</p>         
+        <p>{{ session['username']}}</p> 
+        <a href="signout">
+            <div class="logout">
+                <input type="button" value="LOGOUT">
+            </div>
+        </a>        
     </div>
     {% else %}
         <div class="sign-in-text">
             <p>USERNAME</p>         
         </div>
-        <a href="signout">
-            <div class="logout">
-                <input type="button" value="LOGOUT">
-            </div>
-        </a>
     {% endif %}
-    </a>
+    
     <div class="img-product-all">
         <div class="product-1">
             <img src="{{url_for('static',filename='../static/images/index/pd1.png')}}">
