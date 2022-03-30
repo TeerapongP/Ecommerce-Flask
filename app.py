@@ -1,4 +1,3 @@
-
 import MySQLdb
 from django.shortcuts import redirect
 from flask import Flask, flash, render_template, request, redirect, url_for , session
@@ -20,12 +19,7 @@ mysql = MySQL(app)
 
 @app.route("/index")
 def index():
-  if 'loggedin' in session:
-    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-    cursor.execute('SELECT * FROM user_signin_signup WHERE username = %s', (session['username'],))
-    account = cursor.fetchone()
-    return render_template('index.html', account=account)
-  return redirect(url_for('index'))  
+  return render_template('index.html')
 
 @app.route("/signout", methods=['POST'])
 def signout():
@@ -56,7 +50,9 @@ def submit():
         session['loggedin'] = True
         session['id'] = account['id']
         session['username'] = account['username']
-        return redirect(url_for('index'))
+        session.modified = True
+        print(session)
+        return redirect(url_for('index',session = session))
       else:
         flash('Incorrect username/password')
     else:

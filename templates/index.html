@@ -11,19 +11,19 @@
         <img class="slider2" src="{{url_for('static',filename='../static/images/index/slider2.png')}}">
         <img class="slider3" src="{{url_for('static',filename='../static/images/index/slider3.png')}}">
     </div>
-    {% if session['username'] == True %}
-        <div class="sign-in-text">
-            <p> {{ account['username'] }}</p>         
-        </div>
+    {% if loggedin in session: %}
+    <div class="sign-in-text">
+        <p>{{ session['username']}}</p>         
+    </div>
     {% else %}
         <div class="sign-in-text">
             <p>USERNAME</p>         
         </div>
-        <form action="/signout" method="post">
+        <a href="signout">
             <div class="logout">
                 <input type="button" value="LOGOUT">
             </div>
-        </form>
+        </a>
     {% endif %}
     </a>
     <div class="img-product-all">
