@@ -1,5 +1,5 @@
 
-{% extends 'base.html' %}
+{% extends 'navbar.html' %}
     
 {% block content %}
 
@@ -11,7 +11,21 @@
         <img class="slider2" src="{{url_for('static',filename='../static/images/index/slider2.png')}}">
         <img class="slider3" src="{{url_for('static',filename='../static/images/index/slider3.png')}}">
     </div>
-
+    {% if session['username'] == True %}
+        <div class="sign-in-text">
+            <p> {{ account['username'] }}</p>         
+        </div>
+    {% else %}
+        <div class="sign-in-text">
+            <p>USERNAME</p>         
+        </div>
+        <form action="/signout" method="post">
+            <div class="logout">
+                <input type="button" value="LOGOUT">
+            </div>
+        </form>
+    {% endif %}
+    </a>
     <div class="img-product-all">
         <div class="product-1">
             <img src="{{url_for('static',filename='../static/images/index/pd1.png')}}">

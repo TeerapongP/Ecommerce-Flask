@@ -7,10 +7,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     
-    <link rel="stylesheet"  type="text/css" href="{{url_for('static',filename='css/base.css')}}">
+    <link rel="stylesheet"  type="text/css" href="{{url_for('static',filename='css/navbar.css')}}">
     <script type="text/javascript" src="{{ url_for('static', filename='js/lover.js') }}"></script>
 </head>
-<body>
+ <body>
     <div class="navbar">
         <div class="border-nav">
             <div class="logo">
@@ -23,9 +23,7 @@
                  <input type="text" id="search" name="search" value="Search" >
             </div>
             <a href="{{ url_for('signin') }}" ><img class="img-user" src="{{url_for('static',filename='../static/images/user.png')}}" alt=""></a>
-            <div class="sign-in-text">
-               <p>Username</p>
-            </div>
+            
         </div>
         
     </div>
@@ -35,10 +33,10 @@
         <li>มาใหม่</li>
         <li>โปรโมชั่น</li>
         <li>แนะนำ</li>
-    </div>
+    </div> 
     <br><br><br><br>
     {% block content %}
-
+   
     {% endblock %}
     
 </body>

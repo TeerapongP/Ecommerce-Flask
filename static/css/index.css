@@ -260,3 +260,42 @@
   left: 883px;
   top: 927px;
 }
+.sign-in-text{
+  position: fixed;
+  z-index: 11;
+  height: 24px;
+  left: 1710px;
+
+  top: 35px;
+  
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #FFFFFF;
+}
+.logout input[type=button]{
+  position: fixed;
+  z-index: 11;
+  height: 35px;
+  width: 80px;
+  top: 25px;
+  left: 1820px;
+  border: none;
+
+  border: none;
+  background: #01BFA4;
+  border-radius: 5px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 19px;
+  color: #FFFFFF;
+}

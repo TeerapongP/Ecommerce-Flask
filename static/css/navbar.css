@@ -78,25 +78,7 @@
     left: 1631px;
     top: 5px;
 }
-.sign-in-text{
-    position: fixed;
-    height: 24px;
-    left: 1750px;
 
-    top: 35px;
-    
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 24px;
-    /* identical to box height */
-
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #FFFFFF;
-}
 .navbar-seconds{
     position: fixed;
     z-index: 10;

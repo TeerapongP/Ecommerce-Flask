@@ -20,6 +20,16 @@ mysql = MySQL(app)
 
 @app.route("/index")
 def index():
+  if 'loggedin' in session:
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursor.execute('SELECT * FROM user_signin_signup WHERE username = %s', (session['username'],))
+    account = cursor.fetchone()
+    return render_template('index.html', account=account)
+  return redirect(url_for('index'))  
+
+@app.route("/signout", methods=['POST'])
+def signout():
+  session.pop('username',None)
   return render_template('index.html')
 
 @app.route("/manga_best_seller")
@@ -33,11 +43,11 @@ def signin():
 @app.route("/submit", methods=['POST'])
 def submit():
   cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-  if request.method == 'POST' and 'inputEmail' in request.form and 'inputPassword' in request.form:
-    _email = request.form['inputEmail']
+  if request.method == 'POST' and 'inputUsername' in request.form and 'inputPassword' in request.form:
+    _username = request.form['inputUsername']
     _password = request.form['inputPassword']
 
-    cursor.execute('SELECT * FROM user_signin_signup WHERE email = %s', (_email,))
+    cursor.execute('SELECT * FROM user_signin_signup WHERE username = %s', (_username,))
     account = cursor.fetchone()
 
     if account:
@@ -45,7 +55,7 @@ def submit():
       if check_password_hash(password_rs, _password):
         session['loggedin'] = True
         session['id'] = account['id']
-        session['email'] = account['email']
+        session['username'] = account['username']
         return redirect(url_for('index'))
       else:
         flash('Incorrect username/password')
