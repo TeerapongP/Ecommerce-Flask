@@ -11,23 +11,20 @@
             <div class="text-signup">
                 <h1>SIGN UP</h1>
             </div>
-            <form method="POST">
+            <form action="/signup" method = "POST">
                 <div class="login">
                     <p1>Email</p1>
-                    <input type="email" id="email" name="email" value="example@gmail.com" required>
-                    <div class="password">
-                        <p2>Password</p2>
-                        <input type="password" id="password" name="password" value="*************" required>
+                    <input name="inputEmail" type="text"  value="example@gmail.com" required>
+                    <div class="username">
+                        <p2>Username</p2>
+                        <input name="inputUsername" type="text"   value="Example" required>
                     </div>
                     <div class="confirm-pass">
-                        <p3>Confirm Password</p3>
-                        <input type="password" id="password-confirm" name="password-confirm" value="*************" required>
+                        <p3>Password</p3>
+                        <input name="inputPassword" type="password" value="*************" required>
                     </div>
-                    
                 </div>
-            </form>
-            <form method="GET">
-                <input class="btn-login" type="button" value="SIGN UP"> 
+                <input class="btn-login" type="submit" value="SIGN UP"> 
             </form>
             <div class="line"></div>
             <p4>Do not have account ?</p4>

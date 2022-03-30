@@ -11,16 +11,14 @@
             <div class="text-signin">
                 <h1>SIGN IN</h1>
             </div>
-            <form method="POST">
+            <form action="/submit" method = "POST">
                 <div class="login">
                     <p1>Email</p1>
-                    <input type="email" id="email" name="email" value="example@gmail.com" required>
+                    <input type="text" name="inputEmail" value="Example@gmail.com" required>
                     <p2>Password</p2>
-                    <input type="password" id="email" name="password" value="*************" required>
+                    <input type="password" name="inputPassword" value="*************" required>
                 </div>
-            </form>
-            <form method="GET">
-                <input class="btn-login" type="button" value="SIGNIN"> 
+                <input class="btn-login" type="submit" value="SIGN IN"> 
             </form>
             <div class="line"></div>
             <p3>Do not have account ?</p3>
@@ -28,9 +26,7 @@
             <a href="{{ url_for('signup') }}">
                 <input class="btn-signup" type="button" value="JOIN NOW"> 
             </a>
-            
         </div>
-       
     </main>
     {%endblock%}
 </body>

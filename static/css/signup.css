@@ -89,7 +89,7 @@
     /* identical to box height */
     color: #FFFFFF;
 }
-input[type=email]{
+input[type=text]{
     position: fixed;
     height: 40px;
     left: 1035px;
@@ -108,7 +108,7 @@ input[type=email]{
     /* identical to box height */
     color: #FFFFFF;
 }
-.password input[type=password]{
+.username input[type=text]{
     position: fixed;
     height: 40px;
     left: 1035px;

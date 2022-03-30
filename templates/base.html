@@ -22,9 +22,9 @@
             <div class="search-bar">
                  <input type="text" id="search" name="search" value="Search" >
             </div>
-            <img class="img-user" src="{{url_for('static',filename='../static/images/user.png')}}" alt="">
+            <a href="{{ url_for('signin') }}" ><img class="img-user" src="{{url_for('static',filename='../static/images/user.png')}}" alt=""></a>
             <div class="sign-in-text">
-               <a href="{{ url_for('signin') }}" ><p>SIGN IN / SIGN UP</p></a>
+               <p>Username</p>
             </div>
         </div>
         

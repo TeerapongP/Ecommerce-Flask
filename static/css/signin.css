@@ -57,7 +57,7 @@
     text-align: center;
     color: #FFFFFF;
 }
-input[type=email]{
+input[type=text]{
     position: fixed;
     height: 40px;
     left: 1035px;
