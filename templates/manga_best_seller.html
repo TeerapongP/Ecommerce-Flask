@@ -5,138 +5,29 @@
     <head>
         <link rel="stylesheet"  type="text/css" href="{{url_for('static',filename='css/manga_best_seller.css')}}">
     </head>
-    <div class="text-header">
-        <h1>มังงะขายดี</h1>
-    </div>
-    
-    <div class="line"></div>
-     <div class="product-all">
-        <div class="product-1">
-            <img src="{{url_for('static',filename='../static/images/index/pd1.png')}}">
-            <div class="box-text-1">
-                <p>สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 21</p>
-                <input type="button" value="55 บาท">
-                <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
-            </div>
+    <body >
+        <div class="text-product">
+            <h1>มังงะขายดี</h1>
         </div>
-        
-        <div class="product-2">
-            <img src="{{url_for('static',filename='../static/images/index/pd2.png')}}">
-            <div class="box-text-2">
-                <p>สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 20</p>
-                <input type="button" value="55 บาท">
-                <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
+        <div class="line"></div>
+        {% for items in data %}
+            <div class="product-item">
+                <div class="product-name">
+                    <p>{{items.product_name}}</p>
+                    <div class="product-price">
+                        <input type="submit" value="{{items.product_price}} BATH">
+                        <li title="Love it" class="btn" data-count="0"><span>&#x2764;</span></li> 
+                    </div>
+                </div>
             </div>
+        {% endfor %}
+    </body>
+    <footer>
+        <!-- <div class="imge-left">
+            <img src="{{url_for('static',filename='../static/images/index/bg-right.png')}}">
         </div>
-        <div class="product-3">
-            <img src="{{url_for('static',filename='../static/images/index/pd3.png')}}">
-            <div class="box-text-3">
-                <p>สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 19</p>
-                <input type="button" value="55 บาท">
-                <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
-            </div>
-        </div>
-        <div class="product-4">
-            <img src="{{url_for('static',filename='../static/images/index/pd4.png')}}">
-            <div class="box-text-4">
-                <p>สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 18</p>
-                <input type="button" value="55 บาท">
-                <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
-            </div>
-        </div>
-        <div class="product-5">
-            <img src="{{url_for('static',filename='../static/images/index/pd5.png')}}">
-            <div class="box-text-5">
-                <p>สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 17</p>
-                <input type="button" value="55 บาท">
-                <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
-            </div>
-        </div>
-        <div class="product-6">
-            <img src="{{url_for('static',filename='../static/images/index/pd6.png')}}">
-            <div class="box-text-6">
-                <p>สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 16</p>
-                <input type="button" value="55 บาท">
-                <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
-            </div>
-        </div> 
-        <div class="product-all">
-            <div class="product-7">
-                <img src="{{url_for('static',filename='../static/images/index/pd1.png')}}">
-                <div class="box-text-7">
-                    <p>สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 21</p>
-                    <input type="button" value="55 บาท">
-                    <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
-                </div>
-            </div>
-        </div> 
-        <div class="product-all">
-            <div class="product-8">
-                <img src="{{url_for('static',filename='../static/images/index/pd1.png')}}">
-                <div class="box-text-8">
-                    <p>สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 21</p>
-                    <input type="button" value="55 บาท">
-                    <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
-                </div>
-            </div>
-        </div> 
-        <div class="product-all">
-            <div class="product-9">
-                <img src="{{url_for('static',filename='../static/images/index/pd1.png')}}">
-                <div class="box-text-9">
-                    <p>สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 21</p>
-                    <input type="button" value="55 บาท">
-                    <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
-                </div>
-            </div>
-        </div> 
-        <div class="product-all">
-            <div class="product-10">
-                <img src="{{url_for('static',filename='../static/images/index/pd1.png')}}">
-                <div class="box-text-10">
-                    <p>สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 21</p>
-                    <input type="button" value="55 บาท">
-                    <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
-                </div>
-            </div>
-        </div> 
-        <div class="product-all">
-            <div class="product-11">
-                <img src="{{url_for('static',filename='../static/images/index/pd1.png')}}">
-                <div class="box-text-11">
-                    <p>สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 21</p>
-                    <input type="button" value="55 บาท">
-                    <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
-                </div>
-            </div>
-        </div> 
-        <div class="product-all">
-            <div class="product-12">
-                <img src="{{url_for('static',filename='../static/images/index/pd1.png')}}">
-                <div class="box-text-12">
-                    <p>สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 21</p>
-                    <input type="button" value="55 บาท">
-                    <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
-                </div>
-            </div>
-        </div> 
-        <footer>
-            <div class="text-page">
-                <p>หน้าที่ 1</p>
-            </div>
-            <div class="img-arrow-right">
-                <img src="{{url_for('static',filename='../static/images/index/arrow-right.png')}}">
-            </div>
-            <div class="img-arrow-left">
-                <a href="{{ url_for('index') }}">
-                     <img src="{{url_for('static',filename='../static/images/index/arrow-left.png')}}">
-                </a>
-            </div>
-            <div class="img-bg-left">
-                <img src="{{url_for('static',filename='../static/images/index/bg-right.png')}}">
-            </div>
-            <div class="img-bg-right">
-                <img src="{{url_for('static',filename='../static/images/index/bg-left.png')}}">
-            </div>
-        </footer>
+        <div class="imge-right">
+            <img src="{{url_for('static',filename='../static/images/index/bg-left.png')}}">
+        </div> -->
+    </footer>
 {% endblock %}
