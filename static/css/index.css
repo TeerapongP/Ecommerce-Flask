@@ -119,7 +119,7 @@
   float: left;
   width: 194.24px;
   height: 380.86px;
-  margin-top: 180px;
+  margin-top: 170px;
   margin-left: 100px;
   background: #1D2837;
   border: 1px solid #FFFFFF;
@@ -132,8 +132,8 @@
   font-size: 15px;
   line-height: 15px;
   text-align: center;
-  padding-top: 262.5px;
-  color: #FFFFFF;
+  padding-top: 10px;
+  color: #ffffff;
 }
 
 .product-price input[type='submit']{
@@ -176,4 +176,13 @@
   margin-top: 30px;
   margin-left: 120px;
 }
-
+.imge-left img{
+  position: absolute;
+  left: 1530px;
+  top: 670px
+}
+.imge-right img{
+  position: absolute;
+  left: 0px;
+  top: 670px
+}

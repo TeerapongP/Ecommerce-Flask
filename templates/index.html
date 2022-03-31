@@ -1,38 +1,40 @@
-
 {% extends 'navbar.html' %}
 {% block content %}
 <head>
     <link rel="stylesheet"  type="text/css" href="{{url_for('static',filename='css/index.css')}}">
 </head>
     {% if 'loggedin' in session: %}
-    <div class="sign-in-text">
-        <p>{{ session['username']}}</p> 
-        <a href="signout">
-            <div class="logout">
-                <input type="button" value="LOGOUT">
-            </div>
-        </a>        
-    </div>
+        <div class="sign-in-text">
+            <p>{{ session['username']}}</p> 
+            <a href="signout">
+                <div class="logout">
+                    <input type="button" value="LOGOUT">
+                </div>
+            </a>        
+        </div>
     {% else: %}
         <div class="sign-in-text">
             <p>USERNAME</p>         
         </div>
     {% endif %}
+   
     <div class="image-slider">
-        <img src="{{url_for('static',filename='images/index/slider.png')}}" alt="">
-        <img src="{{url_for('static',filename='images/index/slider2.png')}}" alt="">
-        <img src="{{url_for('static',filename='images/index/slider3.png')}}" alt="">
+        <img src="{{url_for('static',filename='images/accessory/slider.png')}}" alt="">
+        <img src="{{url_for('static',filename='images/accessory/slider2.png')}}" alt="">
+        <img src="{{url_for('static',filename='images/accessory/slider3.png')}}" alt="">
     </div>
     <body>
-        <!-- <div class="text-product">
+        <div class="text-product">
             <p>มังงะ</p>
         </div>
-        <div class="line"></div> -->
+        <div class="line"></div>
         {% for items in data %}
             <div class="product-item">
                 <div class="product-name">
+                    <div class="product-image">
+                        <img src="{{ url_for('static', filename='/images/index/' +items['product_images'] ) }} ">
+                    </div>
                     <p>{{items.product_name}}</p>
-                    
                     <div class="product-price">
                         <input type="submit" value="{{items.product_price}} BATH">
                         <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
@@ -40,13 +42,12 @@
                 </div>
             </div>
         {% endfor %}
-    </body>
-    <footer>
-        <!-- <div class="imge-left">
-            <img src="{{url_for('static',filename='../static/images/index/bg-right.png')}}">
+        <div class="imge-left">
+            <img src="{{url_for('static',filename='../static/images/accessory/bg-right.png')}}">
         </div>
         <div class="imge-right">
-            <img src="{{url_for('static',filename='../static/images/index/bg-left.png')}}">
-        </div> -->
-    </footer>
+            <img src="{{url_for('static',filename='../static/images/accessory/bg-left.png')}}">
+        </div> 
+    </body>
+
 {% endblock %}

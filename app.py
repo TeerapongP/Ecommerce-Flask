@@ -123,12 +123,12 @@ def signup():
   return render_template('signup.html')
 
 
-def allowed_file(filename):
-    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+# def allowed_file(filename):
+#     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 # @app.route('/product/add', methods=['POST'])
 # def addproduct():
-#     # _id = request.form['inputID']
+#     _id = request.form['inputID']
 #     _name = request.form['inputName']
 #     _price = request.form['inputPrice']
 
@@ -144,11 +144,11 @@ def allowed_file(filename):
 #             extension = os.path.splitext(filename)[1]
 #             # ตั้งชื่อ ไฟล์ไปที่โฟลเดอร์ static/images/products ชื่อเปลี่ยน รหัสสินค้า.นามสกุลตามที่upload
 #             upload_filename = os.path.join(
-#                 './static/images/index/', '' + extension)
+#                 './static/images/index/', _id + extension)
 #             # บันทึกไฟล์ลงไปบน server
 #             file.save(upload_filename)
 #             # ชื่อไฟล์ที่จะใส่ลงฐานข้อมูล
-#             _file = '' + extension
+#             _file = _id + extension
 
 #     # เชคว่า ค่า id, name และ price ไมเป็นค่าว่าง
 #     if _name and _price and request.method == 'POST':
