@@ -11,7 +11,7 @@ app = Flask(__name__)
 app.secret_key = "secret key"
 # Intialize MySQL
 app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
+app.config['MYSQL_USER'] = 'admin'
 app.config['MYSQL_PASSWORD'] = '12345678'
 app.config['MYSQL_DB'] = 'bookstore'
 
@@ -20,7 +20,17 @@ mysql = MySQL(app)
 
 @app.route("/index")
 def index():
-  return render_template('index.html')
+  cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+  cursor.execute('SELECT * FROM product ORDER BY product_id')
+  data = cursor.fetchall()
+  return render_template('index.html',data=data)
+  
+@app.route("/")
+def test():
+  cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+  cursor.execute('SELECT * FROM product ORDER BY product_id')
+  data = cursor.fetchall()
+  return render_template('test.html',data=data)
 
 @app.route("/signout")
 def signout():

@@ -271,7 +271,7 @@ h2{
   border: 1px solid #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.img-product-all p{
+.product-all p{
   position: absolute;
   width: 200px;
   height: 40px;
@@ -281,7 +281,7 @@ h2{
   line-height: 17px;
   color: #FFFFFF;
 }
-.img-product-all input[type=button]{
+.product-all input[type=button]{
   position: relative;
   top: 81px;
   left: 130px;
@@ -322,7 +322,7 @@ h2{
     align-items: center;
     color: #FF0000;
 }
-.img-product-all input[type=submit]{
+.product-all input[type=submit]{
     position: relative;
     top: 40px;
     left: 10px;

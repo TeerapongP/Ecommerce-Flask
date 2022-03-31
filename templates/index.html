@@ -25,73 +25,24 @@
             <p>USERNAME</p>         
         </div>
     {% endif %}
-    <div class="img-product-all">
-        <div class="product-1">
-            <img src="{{url_for('static',filename='../static/images/index/pd1.png')}}">
-            <div class="box-text-1">
-                <p>สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 21</p>
-                <input type="button" value="55 บาท">
-                <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
-            </div>
-        </div>
-        <div class="product-2">
-            <img src="{{url_for('static',filename='../static/images/index/pd2.png')}}">
-            <div class="box-text-2">
-                <p>สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 20</p>
-                <input type="button" value="55 บาท">
-                <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
-            </div>
-        </div>
-        <div class="product-3">
-            <img src="{{url_for('static',filename='../static/images/index/pd3.png')}}">
-            <div class="box-text-3">
-                <p>สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 19</p>
-                <input type="button" value="55 บาท">
-                <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
-            </div>
-        </div>
-        <div class="product-4">
-            <img src="{{url_for('static',filename='../static/images/index/pd4.png')}}">
-            <div class="box-text-4">
-                <p>สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 18</p>
-                <input type="button" value="55 บาท">
-                <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
-            </div>
-        </div>
-        <div class="product-5">
-            <img src="{{url_for('static',filename='../static/images/index/pd5.png')}}">
-            <div class="box-text-5">
-                <p>สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 17</p>
-                <input type="button" value="55 บาท">
-                <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
-            </div>
-        </div>
-        <div class="product-6">
-            <img src="{{url_for('static',filename='../static/images/index/pd6.png')}}">
-            <div class="box-text-6">
-                <p>สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 16</p>
-                <input type="button" value="55 บาท">
-                <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
-            </div>
-        </div>
-        <footer>
-            <div class="text-page">
+    
+    <footer>
+        <div class="text-page">
                 <p>หน้าที่ 1</p>
-            </div>
-            <div class="img-arrow-right">
-                <a href="{{ url_for('manga_best_seller') }}">
-                    <img src="{{url_for('static',filename='../static/images/index/arrow-right.png')}}">
-                </a>
-            </div>
-            <div class="img-arrow-left">
-                <img src="{{url_for('static',filename='../static/images/index/arrow-left.png')}}">
-            </div>
-            <div class="img-bg-left">
-                <img src="{{url_for('static',filename='../static/images/index/bg-right.png')}}">
-            </div>
-            <div class="img-bg-right">
-                <img src="{{url_for('static',filename='../static/images/index/bg-left.png')}}">
-            </div>
-        </footer>
-    </div>
+        </div>
+        <div class="img-arrow-right">
+            <a href="{{ url_for('manga_best_seller') }}">
+                <img src="{{url_for('static',filename='../static/images/index/arrow-right.png')}}">
+            </a>
+        </div>
+        <div class="img-arrow-left">
+            <img src="{{url_for('static',filename='../static/images/index/arrow-left.png')}}">
+        </div>
+        <div class="img-bg-left">
+            <img src="{{url_for('static',filename='../static/images/index/bg-right.png')}}">
+        </div>
+        <div class="img-bg-right">
+            <img src="{{url_for('static',filename='../static/images/index/bg-left.png')}}">
+        </div>
+    </footer>
 {% endblock %}
