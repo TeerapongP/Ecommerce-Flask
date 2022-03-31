@@ -20,7 +20,10 @@ mysql = MySQL(app)
 
 @app.route("/index")
 def index():
-  return render_template('index.html')
+  cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+  cursor.execute('SELECT * FROM product_index ORDER BY product_id LIMIT 6')
+  data = cursor.fetchall()
+  return render_template('index.html',data = data)
 
 @app.route("/signout")
 def signout():
@@ -29,7 +32,10 @@ def signout():
 
 @app.route("/manga_best_seller")
 def manga_best_seller():
-  return render_template('manga_best_seller.html')
+  cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+  cursor.execute('SELECT * FROM product_bestseller ORDER BY product_id')
+  data = cursor.fetchall()
+  return render_template('manga_best_seller.html',data = data)
 
 @app.route("/manga_new")
 def manga_new():
@@ -37,7 +43,10 @@ def manga_new():
 
 @app.route("/manga_promotions")
 def manga_promotions():
-  return render_template('manga_promotions.html')
+  cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+  cursor.execute('SELECT * FROM product_promotions ORDER BY product_id')
+  data = cursor.fetchall()
+  return render_template('manga_promotions.html',data = data)
 
 @app.route("/promotions")
 def promotions():

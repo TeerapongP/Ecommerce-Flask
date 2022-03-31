@@ -1,16 +1,9 @@
 
 {% extends 'navbar.html' %}
-    
 {% block content %}
-
 <head>
     <link rel="stylesheet"  type="text/css" href="{{url_for('static',filename='css/index.css')}}">
 </head>
-    <div class="product-slider">
-        <img class="slider1" src="{{url_for('static',filename='../static/images/index/slider.png')}}">
-        <img class="slider2" src="{{url_for('static',filename='../static/images/index/slider2.png')}}">
-        <img class="slider3" src="{{url_for('static',filename='../static/images/index/slider3.png')}}">
-    </div>
     {% if 'loggedin' in session: %}
     <div class="sign-in-text">
         <p>{{ session['username']}}</p> 
@@ -25,73 +18,34 @@
             <p>USERNAME</p>         
         </div>
     {% endif %}
-    <div class="img-product-all">
-        <div class="product-1">
-            <img src="{{url_for('static',filename='../static/images/index/pd1.png')}}">
-            <div class="box-text-1">
-                <p>สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 21</p>
-                <input type="button" value="55 บาท">
-                <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
-            </div>
-        </div>
-        <div class="product-2">
-            <img src="{{url_for('static',filename='../static/images/index/pd2.png')}}">
-            <div class="box-text-2">
-                <p>สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 20</p>
-                <input type="button" value="55 บาท">
-                <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
-            </div>
-        </div>
-        <div class="product-3">
-            <img src="{{url_for('static',filename='../static/images/index/pd3.png')}}">
-            <div class="box-text-3">
-                <p>สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 19</p>
-                <input type="button" value="55 บาท">
-                <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
-            </div>
-        </div>
-        <div class="product-4">
-            <img src="{{url_for('static',filename='../static/images/index/pd4.png')}}">
-            <div class="box-text-4">
-                <p>สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 18</p>
-                <input type="button" value="55 บาท">
-                <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
-            </div>
-        </div>
-        <div class="product-5">
-            <img src="{{url_for('static',filename='../static/images/index/pd5.png')}}">
-            <div class="box-text-5">
-                <p>สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 17</p>
-                <input type="button" value="55 บาท">
-                <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
-            </div>
-        </div>
-        <div class="product-6">
-            <img src="{{url_for('static',filename='../static/images/index/pd6.png')}}">
-            <div class="box-text-6">
-                <p>สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 16</p>
-                <input type="button" value="55 บาท">
-                <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
-            </div>
-        </div>
-        <footer>
-            <div class="text-page">
-                <p>หน้าที่ 1</p>
-            </div>
-            <div class="img-arrow-right">
-                <a href="{{ url_for('manga_best_seller') }}">
-                    <img src="{{url_for('static',filename='../static/images/index/arrow-right.png')}}">
-                </a>
-            </div>
-            <div class="img-arrow-left">
-                <img src="{{url_for('static',filename='../static/images/index/arrow-left.png')}}">
-            </div>
-            <div class="img-bg-left">
-                <img src="{{url_for('static',filename='../static/images/index/bg-right.png')}}">
-            </div>
-            <div class="img-bg-right">
-                <img src="{{url_for('static',filename='../static/images/index/bg-left.png')}}">
-            </div>
-        </footer>
+    <div class="image-slider">
+        <img src="{{url_for('static',filename='images/index/slider.png')}}" alt="">
+        <img src="{{url_for('static',filename='images/index/slider2.png')}}" alt="">
+        <img src="{{url_for('static',filename='images/index/slider3.png')}}" alt="">
     </div>
+    <body>
+        <div class="text-product">
+            <p>มังงะ</p>
+        </div>
+        <div class="line"></div>
+        {% for items in data %}
+            <div class="product-item">
+                <div class="product-name">
+                    <p>{{items.product_name}}</p>
+                    <div class="product-price">
+                        <input type="submit" value="{{items.product_price}} BATH">
+                        <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </body>
+    <footer>
+        <!-- <div class="imge-left">
+            <img src="{{url_for('static',filename='../static/images/index/bg-right.png')}}">
+        </div>
+        <div class="imge-right">
+            <img src="{{url_for('static',filename='../static/images/index/bg-left.png')}}">
+        </div> -->
+    </footer>
 {% endblock %}
