@@ -24,14 +24,15 @@
         <img src="{{url_for('static',filename='images/index/slider3.png')}}" alt="">
     </div>
     <body>
-        <div class="text-product">
+        <!-- <div class="text-product">
             <p>มังงะ</p>
         </div>
-        <div class="line"></div>
+        <div class="line"></div> -->
         {% for items in data %}
             <div class="product-item">
                 <div class="product-name">
                     <p>{{items.product_name}}</p>
+                    
                     <div class="product-price">
                         <input type="submit" value="{{items.product_price}} BATH">
                         <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
