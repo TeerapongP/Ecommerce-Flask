@@ -15,6 +15,45 @@
 .body{
   background-image: url('../images/index/HOME.png');
 }
+.sign-in-text{
+  position: fixed;
+  z-index: 11;
+  height: 24px;
+  left: 1710px;
+
+  top: 35px;
+  
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #ffffff;
+}
+.logout input[type=submit]{
+  position: fixed;
+  z-index: 11;
+  height: 35px;
+  width: 80px;
+  top: 25px;
+  left: 1820px;
+  border: none;
+
+  border: none;
+  background: #01BFA4;
+  border-radius: 5px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
 .text-product h1{
   position: absolute;
   left: 100px;
@@ -34,17 +73,23 @@
   top: 220px;
   border: 1px solid #000000;
 }
+.text-header h1{
+  position: absolute;
+  left: 100px;
+  top: 150px;
+}
 .product-item {
+  z-index: 9;
   float: left;
   width: 194.24px;
   height: 380.86px;
-  margin-top: 90px;
+  margin: auto;
   margin-left: 100px;
+  margin-top: 100px;
   background: #1D2837;
   border: 1px solid #FFFFFF;
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  z-index: 8;
 }
 .product-name p{
   font-style: normal;
@@ -52,8 +97,8 @@
   font-size: 15px;
   line-height: 15px;
   text-align: center;
-  padding-top: 262.5px;
-  color: #FFFFFF;
+  padding-top: 10px;
+  color: #ffffff;
 }
 .product-price input[type='submit']{
   margin-top: 30px;
@@ -64,13 +109,12 @@
   border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
-
+  font-size: 16px;
   color: #FFFFFF;
 }
-
 .btn {
   margin-top: -55px;
-  margin-left: 10px;
+  margin-left: 13px;
   border-radius: 10px;
   background: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -128,4 +172,14 @@
 .btn:active span {
   color: #b12f27;
   text-shadow: 0 1px 0 rgba(255, 255, 255);
+}
+.imge-left img{
+  position: absolute;
+  left: 1535px;
+  top: 850px
+}
+.imge-right img{
+  position: absolute;
+  left: 0px;
+  top: 850px
 }
