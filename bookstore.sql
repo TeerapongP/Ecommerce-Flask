@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 01, 2022 at 02:03 PM
+-- Generation Time: Apr 02, 2022 at 08:30 AM
 -- Server version: 8.0.17
 -- PHP Version: 7.3.10
 
@@ -21,8 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `bookstore`
 --
-CREATE DATABASE IF NOT EXISTS `bookstore` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `bookstore`;
 
 -- --------------------------------------------------------
 
@@ -53,7 +51,8 @@ INSERT INTO `product_bestseller` (`product_id`, `product_name`, `product_price`,
 (9, 'มิเอรุโกะจัง ใครว่าหนูเห็นผี เล่มที่ 3', 129, 'pd9.png'),
 (10, 'มิเอรุโกะจัง ใครว่าหนูเห็นผี เล่มที่ 4', 129, 'pd10.png'),
 (11, 'NO GAME NO LIFE เล่มที่ 1', 100, 'pd11.png'),
-(12, 'NO GAME NO LIFE เล่มที่ 2', 100, 'pd12.png');
+(12, 'NO GAME NO LIFE เล่มที่ 2', 100, 'pd12.png'),
+(13, 'pppp', 55, 'pd1.png');
 
 -- --------------------------------------------------------
 
@@ -79,6 +78,68 @@ INSERT INTO `product_index` (`product_id`, `product_name`, `product_price`, `pro
 (4, 'สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 20', 55, 'pd4.png'),
 (5, 'ยากแท้จริงหนอรักของโอตาคุ เล่มที่ 9', 55, 'pd5.png'),
 (6, 'เกิดใหม่ทั้งทีก็เป็นสไลม์ไปซะแล้ว เล่มที่ 18', 55, 'pd6.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `product_introduce`
+--
+
+CREATE TABLE `product_introduce` (
+  `product_id` int(11) NOT NULL,
+  `product_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `product_price` int(10) NOT NULL,
+  `product_images` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `product_introduce`
+--
+
+INSERT INTO `product_introduce` (`product_id`, `product_name`, `product_price`, `product_images`) VALUES
+(1, 'สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 21', 55, 'pd1.png'),
+(2, 'สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 20', 55, 'pd2.png'),
+(3, 'สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 19', 55, 'pd3.png'),
+(4, 'สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 18', 55, 'pd4.png'),
+(5, 'เกิดใหม่ทั้งทีก็เป็นสไลม์ไปซะแล้ว เล่มที่ 19', 55, 'pd5.png'),
+(6, 'เกิดใหม่ทั้งทีก็เป็นสไลม์ไปซะแล้ว เล่มที่ 18', 55, 'pd6.png'),
+(7, 'เกิดใหม่ทั้งทีก็เป็นสไลม์ไปซะแล้ว เล่มที่ 17', 55, 'pd7.png'),
+(8, 'เกิดใหม่ทั้งทีก็เป็นสไลม์ไปซะแล้ว เล่มที่ 16', 55, 'pd8.png'),
+(9, 'ยากแท้จริงหนอรักของโอตาคุ เล่มที่ 10', 55, 'pd9.png'),
+(10, 'ยากแท้จริงหนอรักของโอตาคุ เล่มที่ 9', 55, 'pd10.png'),
+(11, 'ยากแท้จริงหนอรักของโอตาคุ เล่มที่ 8', 55, 'pd11.png'),
+(12, 'ยากแท้จริงหนอรักของโอตาคุ เล่มที่ 7', 55, 'pd12.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `product_new`
+--
+
+CREATE TABLE `product_new` (
+  `product_id` int(11) NOT NULL,
+  `product_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `product_price` int(10) NOT NULL,
+  `product_images` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `product_new`
+--
+
+INSERT INTO `product_new` (`product_id`, `product_name`, `product_price`, `product_images`) VALUES
+(1, 'สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 21', 55, 'pd1.png'),
+(2, 'สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 20', 55, 'pd2.png'),
+(3, 'เกิดใหม่ทั้งทีก็เป็นสไลม์ไปซะแล้ว เล่มที่ 19', 55, 'pd3.png'),
+(4, 'เกิดใหม่ทั้งทีก็เป็นสไลม์ไปซะแล้ว เล่มที่ 18', 55, 'pd4.png'),
+(5, 'ยากแท้จริงหนอรักของโอตาคุ เล่มที่ 10', 55, 'pd5.png'),
+(6, 'ยากแท้จริงหนอรักของโอตาคุ เล่มที่ 9', 55, 'pd6.png'),
+(7, 'สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 19', 55, 'pd7.png'),
+(8, 'สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 18', 55, 'pd8.png'),
+(9, 'เกิดใหม่ทั้งทีก็เป็นสไลม์ไปซะแล้ว เล่มที่ 17', 55, 'pd9.png'),
+(10, 'เกิดใหม่ทั้งทีก็เป็นสไลม์ไปซะแล้ว เล่มที่ 16', 55, 'pd10.png'),
+(11, 'ยากแท้จริงหนอรักของโอตาคุ เล่มที่ 8', 55, 'pd11.png'),
+(12, 'ยากแท้จริงหนอรักของโอตาคุ เล่มที่ 7', 55, 'pd12.png');
 
 -- --------------------------------------------------------
 
@@ -144,6 +205,18 @@ ALTER TABLE `product_index`
   ADD PRIMARY KEY (`product_id`);
 
 --
+-- Indexes for table `product_introduce`
+--
+ALTER TABLE `product_introduce`
+  ADD PRIMARY KEY (`product_id`);
+
+--
+-- Indexes for table `product_new`
+--
+ALTER TABLE `product_new`
+  ADD PRIMARY KEY (`product_id`);
+
+--
 -- Indexes for table `product_promotions`
 --
 ALTER TABLE `product_promotions`
@@ -163,13 +236,25 @@ ALTER TABLE `user_signin_signup`
 -- AUTO_INCREMENT for table `product_bestseller`
 --
 ALTER TABLE `product_bestseller`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `product_index`
 --
 ALTER TABLE `product_index`
   MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `product_introduce`
+--
+ALTER TABLE `product_introduce`
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `product_new`
+--
+ALTER TABLE `product_new`
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `product_promotions`
