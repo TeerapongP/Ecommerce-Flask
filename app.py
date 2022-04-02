@@ -153,7 +153,7 @@ def addproduct():
             extension = os.path.splitext(filename)[1]
             # ตั้งชื่อ ไฟล์ไปที่โฟลเดอร์ static/images/products ชื่อเปลี่ยน รหัสสินค้า.นามสกุลตามที่upload
             upload_filename = os.path.join(
-                './static/images/bestseller/images/', _id + extension)
+                './static/images/product_introduce/images/', _id + extension)
             # บันทึกไฟล์ลงไปบน server
             file.save(upload_filename)
             # ชื่อไฟล์ที่จะใส่ลงฐานข้อมูล
@@ -164,7 +164,7 @@ def addproduct():
         try:
             cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
             # ? คือให้เติมด้วย data
-            cursor.execute(''' INSERT INTO product_bestseller VALUES(NULL,%s,%s,%s)''',(_name,_price,_file))
+            cursor.execute(''' INSERT INTO product_introduce VALUES(NULL,%s,%s,%s)''',(_name,_price,_file))
             mysql.connection.commit()
         except Exception as e:
             print(e)
