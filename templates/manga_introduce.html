@@ -1,11 +1,46 @@
-
+{% extends 'navbar.html' %}
     
 {% block content %}
     <head>
-        <link rel="stylesheet"  type="text/css" href="{{url_for('static',filename='css/manga_promotions.css')}}">
+        <link rel="stylesheet"  type="text/css" href="{{url_for('static',filename='css/manga_introduce.css')}}">
     </head>
     <div class="text-header">
         <h1>มังงะแนะนำ</h1>
     </div>
+    
+    {% if 'loggedin' in session: %}
+    <div class="sign-in-text">
+        <p>{{ session['username']}}</p> 
+        <a href="signout">  
+            <div class="logout">
+                <input type="button" value="LOGOUT">
+            </div>
+        </a>        
+    </div>
+    {% else: %}
+        <div class="sign-in-text">
+            <p>ผอ รสนิยมดี</p>         
+        </div>
+    {% endif %}
     <div class="line"></div>
+    {% for items in data %}
+            <div class="product-item">
+                <div class="product-name">
+                    <div class="product-image">
+                        <img src="{{ url_for('static', filename='/images/new_product/images/' +items['product_images'] ) }} ">
+                    </div>
+                    <p>{{items.product_name}}</p>
+                    <div class="product-price">
+                        <input type="submit" value="{{items.product_price}} BATH">
+                        <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
+                    </div>
+                </div>
+            </div>
+    {% endfor %}
+    <div class="imge-left">
+        <img src="{{url_for('static',filename='../static/images/accessory/bg-right.png')}}">
+    </div>
+    <div class="imge-right">
+        <img src="{{url_for('static',filename='../static/images/accessory/bg-left.png')}}">
+    </div> 
 {% endblock %}
