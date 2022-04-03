@@ -23,6 +23,7 @@ mysql = MySQL(app)
 
 
 @app.route("/index")
+@app.route("/")
 def index():
   cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
   cursor.execute('SELECT * FROM product_index ORDER BY product_id LIMIT 6')
