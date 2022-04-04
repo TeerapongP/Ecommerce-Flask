@@ -9,14 +9,14 @@
         <h1>มังงะมาใหม่</h1>
     </div>
     {% if 'loggedin' in session: %}
-    <div class="sign-in-text">
-        <p>{{ session['username']}}</p> 
-        <a href="signout">  
-            <div class="logout">
-                <input type="button" value="LOGOUT">
-            </div>
-        </a>        
-    </div>
+        <div class="sign-in-text">
+            <p>{{ session['username']}}</p> 
+            <a href="signout">  
+                <div class="logout">
+                    <input type="button" value="LOGOUT">
+                </div>
+            </a>        
+        </div>
     {% else: %}
         <div class="sign-in-text">
             <p>ผอ รสนิยมดี</p>         

@@ -3,16 +3,16 @@
     
 {% block content %}
     <head>
-        <link rel="stylesheet"  type="text/css" href="{{url_for('static',filename='css/manga_best_seller.css')}}">
+        <link rel="stylesheet"  type="text/css" href="{{url_for('static',filename='css/manga_best_seller.css')}}">  
     </head>
     {% if 'loggedin' in session: %}
         <div class="sign-in-text">
             <p>{{ session['username']}}</p> 
-            <a href="signout">
+            <a href="signout">  
                 <div class="logout">
-                    <input type="submit" value="LOGOUT">
+                    <input type="button" value="LOGOUT">
                 </div>
-            </a>    
+            </a>        
         </div>
     {% else: %}
         <div class="sign-in-text">

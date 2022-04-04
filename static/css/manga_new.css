@@ -28,8 +28,8 @@ h1{
   position: fixed;
   z-index: 11;
   height: 24px;
-  left: 1746px;
-  top: 30px;
+  left: 1730px;
+  top: 35px;
   
   font-style: normal;
   font-weight: 400;
@@ -42,6 +42,25 @@ h1{
   text-align: center;
 
   color: #ffffff;
+}
+.logout input[type=button]{
+  position: fixed;
+  z-index: 11;
+  height: 35px;
+  width: 80px;
+  top: 25px;
+  left: 1810px;
+  border: none;
+
+  border: none;
+  background: #01BFA4;
+  border-radius: 5px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 19px;
+  color: #FFFFFF;
 }
 .line{
   position: absolute;

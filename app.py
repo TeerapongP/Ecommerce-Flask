@@ -4,8 +4,6 @@ from flask import Flask, flash, render_template, request, redirect, url_for , se
 from flask_mysqldb import MySQL
 import re
 from werkzeug.security import generate_password_hash, check_password_hash
-from werkzeug.utils import secure_filename
-import os
 
 #Yume Nishimiya
 app = Flask(__name__)
@@ -133,51 +131,6 @@ def signup():
       msg = 'Please fill out the form !'
 
   return render_template('signup.html')
-
-
-# def allowed_file(filename):
-#     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
-
-# @app.route('/product/add', methods=['POST'])
-# def addproduct():
-#     _id = request.form['inputID']
-#     _name = request.form['inputName']
-#     _price = request.form['inputPrice']
-
-#     if 'file' in request.files:
-#         file = request.files['file']
-#         # if file : ไฟล์ค่าไม่เป็น None
-#         # not(file.filename == '') : user ต้องอัพโฟลไฟล์
-#         # allowed_file(file.filename) : นามสกุลไฟล์ต้องเป็น 'png', 'jpg', 'jpeg', 'gif'
-#         if file and not(file.filename == '') and allowed_file(file.filename):
-#             # หาชื่อไฟล์
-#             filename = secure_filename(file.filename)
-#             # หานามสกุลไฟล์
-#             extension = os.path.splitext(filename)[1]
-#             # ตั้งชื่อ ไฟล์ไปที่โฟลเดอร์ static/images/products ชื่อเปลี่ยน รหัสสินค้า.นามสกุลตามที่upload
-#             upload_filename = os.path.join(
-#                 './static/images/product_introduce/images/', _id + extension)
-#             # บันทึกไฟล์ลงไปบน server
-#             file.save(upload_filename)
-#             # ชื่อไฟล์ที่จะใส่ลงฐานข้อมูล
-#             _file = _id + extension
-
-#     # เชคว่า ค่า id, name และ price ไมเป็นค่าว่าง
-#     if _name and _price and request.method == 'POST':
-#         try:
-#             cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-#             # ? คือให้เติมด้วย data
-#             cursor.execute(''' INSERT INTO product_introduce VALUES(NULL,%s,%s,%s)''',(_name,_price,_file))
-#             mysql.connection.commit()
-#         except Exception as e:
-#             print(e)
-#         finally:
-#             cursor.close()
-#     return 'success'
-
-# @app.route("/")
-# def product():
-#   return render_template('insert_product.html')
 
 if __name__ == "__main__":
   app.run(debug=True)

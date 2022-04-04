@@ -2,6 +2,7 @@
     
 {% block content %}
     <head>
+        
         <link rel="stylesheet"  type="text/css" href="{{url_for('static',filename='css/manga_introduce.css')}}">
     </head>
     <div class="text-header">
@@ -9,14 +10,14 @@
     </div>
     
     {% if 'loggedin' in session: %}
-    <div class="sign-in-text">
-        <p>{{ session['username']}}</p> 
-        <a href="signout">  
-            <div class="logout">
-                <input type="button" value="LOGOUT">
-            </div>
-        </a>        
-    </div>
+        <div class="sign-in-text">
+            <p>{{ session['username']}}</p> 
+            <a href="signout">  
+                <div class="logout">
+                    <input type="button" value="LOGOUT">
+                </div>
+            </a>        
+        </div>
     {% else: %}
         <div class="sign-in-text">
             <p>ผอ รสนิยมดี</p>         
