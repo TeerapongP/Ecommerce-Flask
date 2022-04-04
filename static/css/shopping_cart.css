@@ -15,35 +15,40 @@
   position: fixed;
   z-index: 11;
   height: 24px;
-  left: 1730px;
+  left: 1620px;
   top: 35px;
-    
-  font-style: normal;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 24px;
-  
-  color: #ffffff;
-  }
-.logout input[type=button]{
-  position: fixed;
-  z-index: 11;
-  height: 35px;
-  width: 80px;
-  top: 25px;
-  left: 1810px;
-  border: none;
-  
-  border: none;
-  background: #01BFA4;
-  border-radius: 5px;
   
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 19px;
-  color: #FFFFFF;
-}
+  line-height: 24px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #ffffff;
+  }
+  .logout input[type=button]{
+    position: fixed;
+    z-index: 11;
+    height: 35px;
+    width: 80px;
+    top: 25px;
+    left: 1735px;
+    border: none;
+  
+    border: none;
+    background: #01BFA4;
+    border-radius: 5px;
+  
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 19px;
+    color: #FFFFFF;
+  }
 .header h1{
   position: relative;
   left: 198px;
@@ -162,4 +167,12 @@ input[type='button']{
   width: 135px;
   height: 178.98px;
   margin-right: 50px;
+}
+.img-shopping-cart img{
+  z-index: 11;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  left: 1820px;
+  top: 15px;
 }

@@ -22,38 +22,42 @@
     <div class="line"></div>
     <div class="shopping-cart-list"><h1>รายการตะกร้าสินค้า</h1></div>
     <table class="product-table">
-        <tr>
-            <th></th>
-            <th></th>
-            <th>
-                <input class="emtry-product" type="submit" value="Emtry">
-            </th>
-        </tr>
-        <tr>
-            <td>
-                <div class="img-product">
-                    <img src="{{url_for('static',filename='images/accessory/pd1.png')}}" alt="">
-                </div>
-            </td>
-            <td>
-                <div class="name-product">
-                <p>สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 21</p>
-                <div class="accessory-tex">
-                    <span>ราคา</span>
-                    <span>จำนวน</span>
-                    <span>ราคารวม</span>
-                </div>
-                <form action="">
-                    <div class="accessory-input">
-                        <input type="button" value="55 บาท">
-                        <input type="text" value="เล่ม">
-                        <input type="button" value="55 บาท">
+        <tbody>
+            <tr>
+                <th></th>
+                <th></th>
+                <th>
+                    <a href="/clear-item">
+                        <input class="emtry-product" type="submit" value="Emtry">
+                    </a>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="img-product">
+                        <img src="{{url_for('static',filename='images/accessory/pd1.png')}}" alt="">
                     </div>
-                </form>
-            </td>
-              <td>
-                <input class="del-product" type="submit" value="ลบ">
-            </td>
-        </tr>
+                </td>
+                <td>
+                    <div class="name-product">
+                    <p>สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 21</p>
+                    <div class="accessory-tex">
+                        <span>ราคา</span>
+                        <span>จำนวน</span>
+                        <span>ราคารวม</span>
+                    </div>
+                    <form action="" method="post">
+                        <div class="accessory-input">
+                            <input type="button" value="55 บาท">
+                            <input type="text" value="เล่ม">
+                            <input type="button" value="55 บาท">
+                        </div>
+                    </form>
+                </td>
+                <td>
+                    <input class="del-product" type="submit" value="ลบ">
+                </td>
+            </tr>
+        </tbody>
     </table>
 {% endblock %}

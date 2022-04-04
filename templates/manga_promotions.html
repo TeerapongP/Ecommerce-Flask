@@ -41,6 +41,11 @@
             
         </div>
     {% endfor %}
+    <div class="img-shopping-cart">
+        <a href="/shopping_cart">
+            <img src="{{url_for('static',filename='images/accessory/shopping-cart.png')}}" alt="">
+        </a>
+    </div>
     {% for items in items_ %}
     <div class="product-item">
         <div class="product-name">
