@@ -27,21 +27,7 @@
         <div class="product-item">
             <div class="product-name">
                 <div class="product-image">
-                    <img src="{{ url_for('static', filename='/images/bestseller/images/' +items['product_images'] ) }} ">
-                </div>
-                <p>{{items.product_name}}</p>
-                <div class="product-price">
-                    <input type="submit" value="{{items.product_price}} BATH">
-                    <li title="Love it" class="btn" data-count="0"><span>&#x2764;</span></li> 
-                </div>
-            </div>
-        </div>
-    {% endfor %}
-    {% for items in data_ %}
-        <div class="product-item">
-            <div class="product-name">
-                <div class="product-image">
-                    <img src="{{ url_for('static', filename='/images/bestseller/images/' +items['product_images'] ) }} ">
+                    <img src="{{ url_for('static', filename='/images/products/images/' +items['product_images'] ) }} ">
                 </div>
                 <p>{{items.product_name}}</p>
                 <div class="product-price">
