@@ -24,7 +24,7 @@ mysql = MySQL(app)
 
 
 @app.route("/index")
-@app.route("/")
+# @app.route("/")
 def index():
   cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
   cursor.execute('SELECT * FROM products WHERE product_id < 7')
@@ -132,6 +132,10 @@ def signup():
       msg = 'Please fill out the form !'
 
   return render_template('signup.html')
+
+@app.route('/')
+def shopping_cart():
+    return render_template('shopping_cart.html')
 
 # def allowed_file(filename):
 #     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS

@@ -1,0 +1,59 @@
+{% extends 'navbar.html' %}
+{% block content %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"  type="text/css" href="{{url_for('static',filename='css/shopping_cart.css')}}">
+</head>
+    {% if 'loggedin' in session: %}
+    <div class="sign-in-text">
+        <p>{{ session['username']}}</p> 
+        <a href="signout">  
+            <div class="logout">
+                <input type="button" value="LOGOUT">
+            </div>
+        </a>        
+    </div>
+    {% else: %}
+    <div class="sign-in-text">
+        <p>ผอ รสนิยมดี</p>         
+    </div>
+    {% endif %}
+    <div class="header"><h1>ตะกร้าสินค้า</h1></div>
+    <div class="line"></div>
+    <div class="shopping-cart-list"><h1>รายการตะกร้าสินค้า</h1></div>
+    <table class="product-table">
+        <tr>
+            <th></th>
+            <th></th>
+            <th>
+                <input class="emtry-product" type="submit" value="Emtry">
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <div class="img-product">
+                    <img src="{{url_for('static',filename='images/accessory/pd1.png')}}" alt="">
+                </div>
+            </td>
+            <td>
+                <div class="name-product">
+                <p>สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 21</p>
+                <div class="accessory-tex">
+                    <span>ราคา</span>
+                    <span>จำนวน</span>
+                    <span>ราคารวม</span>
+                </div>
+                <form action="">
+                    <div class="accessory-input">
+                        <input type="button" value="55 บาท">
+                        <input type="text" value="เล่ม">
+                        <input type="button" value="55 บาท">
+                    </div>
+                </form>
+            </td>
+              <td>
+                <input class="del-product" type="submit" value="ลบ">
+            </td>
+        </tr>
+    </table>
+{% endblock %}
