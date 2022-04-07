@@ -20,8 +20,9 @@
     {% endif %}
     <div class="header"><h1>ตะกร้าสินค้า</h1></div>
     <div class="line"></div>
+    {% if 'product_items' in session %}
     <div class="shopping-cart-list"><h1>รายการตะกร้าสินค้า</h1></div>
-    <table class="product-table">
+    <table class="product-table" >
         <tbody>
             <tr>
                 <th></th>
@@ -32,15 +33,25 @@
                     </a>
                 </th>
             </tr>
+            {% for key, val in session['product_items'].items() %}
+            {% set code = session['product_items'][key]['code'] %}
+            {% set name = session['product_items'][key]['name'] %}
+            {% set image = session['product_items'][key]['image'] %}
+            {% set quantity = session['product_items'][key]['quantity'] %}
+            {% set unit_price = session['product_items'][key]['price'] %}
+            {% set total_price = session['product_items'][key]['total_price'] %}
             <tr>
                 <td>
+                    <br>
                     <div class="img-product">
-                        <img src="{{url_for('static',filename='images/accessory/pd1.png')}}" alt="">
+                       <img src="/static/images/products/images/{{image}}">
                     </div>
+                    <br>
                 </td>
-                <td>
+                
+                <td >
                     <div class="name-product">
-                    <p>สารภาพรักกับคุณคางุยะซะดีๆ เล่มที่ 21</p>
+                    <p>{{name}}</p>
                     <div class="accessory-tex">
                         <span>ราคา</span>
                         <span>จำนวน</span>
@@ -48,16 +59,29 @@
                     </div>
                     <form action="" method="post">
                         <div class="accessory-input">
-                            <input type="button" value="55 บาท">
-                            <input type="text" value="เล่ม">
-                            <input type="button" value="55 บาท">
+                            <input type="button" value="{{unit_price }} บาท">
+                            <input type="text" value="{{quantity}} เล่ม">
+                            <input type="button" value="{{total_price}} บาท">
                         </div>
                     </form>
                 </td>
                 <td>
-                    <input class="del-product" type="submit" value="ลบ">
+                    <a href="/product_item_delete/{{code}}">
+                        <input class="del-product" type="submit" value="ลบ">
+                    </a>
                 </td>
+                
+            {% endfor %}
             </tr>
         </tbody>
     </table>
+    <div class="box">
+        <h1>
+            ยอดชำระ {{ session['all_total_price'] }} บาท
+        </h1>
+        <input type="submit" value="ชำระเงิน">
+    </div>
+    {% else: %}
+    <div class="shopping-cart-list"><h1>ไม่มีรายการตะกร้าสินค้า</h1></div>
+    {% endif %}
 {% endblock %}

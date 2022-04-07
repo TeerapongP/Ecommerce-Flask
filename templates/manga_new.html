@@ -29,6 +29,7 @@
     </div>
     <div class="line"></div>
     {% for items in data %}
+        <form method="post" action="/add_product">
             <div class="product-item">
                 <div class="product-name">
                     <div class="product-image">
@@ -37,10 +38,17 @@
                     <p>{{items.product_name}}</p>
                     <div class="product-price">
                         <input type="submit" value="{{items.product_price}} BATH">
-                        <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
+                        <input class="product-quantity"  type="text"  name="quantity" value="1">
+                        <div class="hiddent-input">
+                            <input type="hidden" name="code" value="{{ items['product_id'] }}" />
+                            <input type="hidden" name="name" value="{{ items['product_name'] }}" />
+                            <input type="hidden" name="price" value="{{ items['product_price'] }}" />
+                            <input type="hidden" name="image" value="{{ items['product_images'] }}" />
+                        </div>
                     </div>
                 </div>
             </div>
+        </form>
     {% endfor %}
     <div class="imge-left">
         <img src="{{url_for('static',filename='../static/images/accessory/bg-right.png')}}">
