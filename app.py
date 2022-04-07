@@ -298,14 +298,14 @@ def get_product_dict():
 
 @app.route('/product_item_delete/<string:code>')
 def delete_product_from_product_items(code):
-    try:
-        # pop ใช้ ลบค่าจาก dictionary
-        session['product_items'].pop(code, None)
-        process_product_item()  # จำนวนสินค้าหายไปดังนั้นให้คำนวนจำนวนเงินที่ต้องจ่ายใหม่
+  try:
+    # pop ใช้ ลบค่าจาก dictionary
+    session['product_items'].pop(code, None)
+    process_product_item()  # จำนวนสินค้าหายไปดังนั้นให้คำนวนจำนวนเงินที่ต้องจ่ายใหม่
 
-        return redirect('/shopping_cart')
-    except Exception as e:
-        print(e)
+    return redirect('/shopping_cart')
+  except Exception as e:
+    print(e)
 
 if __name__ == "__main__":
   rules = get_rules(min_support=0.05, min_confidence=0.8)

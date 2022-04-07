@@ -137,3 +137,12 @@ h1{
   left: 1820px;
   top: 15px;
 }
+.product-name p{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 15px;
+  text-align: center;
+  padding-top: 10px;
+  color: #ffffff;
+}
