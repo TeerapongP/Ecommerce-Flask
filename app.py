@@ -9,6 +9,7 @@ from mlxtend.frequent_patterns import association_rules
 from mlxtend.frequent_patterns import fpgrowth
 from tqdm import tqdm
 import pandas as pd
+
 #Yume Nishimiya
 app = Flask(__name__)
 
@@ -22,7 +23,6 @@ app.config['MYSQL_PASSWORD'] = '12345678'
 app.config['MYSQL_DB'] = 'bookstore'
 
 mysql = MySQL(app)
-
 
 @app.route("/index")
 @app.route("/")
@@ -144,7 +144,7 @@ def clear_item():
   # การทำตะกร้าให้ว่างไม่ควรใช้ session.clear() เพราะว่าถ้าเราทำระบบ user password
   # username password ใน session จะหายไปด้วย
   # ควรใช้ session.pop('product_items') เพื่อลบเฉพาะ product_items
-    session.clear()  # clear session
+    session.pop('product_items') # clear session
     return render_template('shopping_cart.html')
   except Exception as e:
     print(e)
