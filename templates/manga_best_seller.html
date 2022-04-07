@@ -5,6 +5,7 @@
     <head>
         <link rel="stylesheet"  type="text/css" href="{{url_for('static',filename='css/manga_best_seller.css')}}">  
     </head>
+    
     {% if 'loggedin' in session: %}
         <div class="sign-in-text">
             <p>{{ session['username']}}</p> 
@@ -13,6 +14,11 @@
                     <input type="button" value="LOGOUT">
                 </div>
             </a>        
+        </div>
+        <div class="song">
+            <audio autoplay controlsList="nodownload">
+                <source src="{{url_for('static',filename='../static/sounds/『แปลไทย』Akuma no Ko – Ai Higuchi [Attack on Titan Final Season Part 2 ED].mp3')}}" type="audio/mpeg">
+            </audio>
         </div>
     {% else: %}
         <div class="sign-in-text">

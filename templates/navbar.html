@@ -14,14 +14,14 @@
     <div class="navbar">
         <div class="border-nav">
             <div class="logo">
-                <img src="{{url_for('static',filename='../static/images/logo.jpg')}}" alt="">
+                <a href="{{ url_for('index') }}">
+                    <img src="{{url_for('static',filename='../static/images/logo.jpg')}}" alt="">
+                </a>
             </div>
             <div class="text-name">
                 <p>Manga Shop Online</p>
             </div>
-            <div class="search-bar">
-                 <input type="text" id="search" name="search" value="Search" >
-            </div>
+           
             <a href="{{ url_for('signin') }}" ><img class="img-user" src="{{url_for('static',filename='../static/images/logo.jpg')}}" alt=""></a>
             
         </div>

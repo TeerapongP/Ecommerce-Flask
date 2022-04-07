@@ -21,6 +21,11 @@
     <div class="header"><h1>ตะกร้าสินค้า</h1></div>
     <div class="line"></div>
     {% if 'product_items' in session %}
+    <div class="song">
+        <audio autoplay controlsList="nodownload">
+            <source src="{{url_for('static',filename='../static/sounds/あなたの夜が明けるまで 傘村トータ cover.mp3')}}" type="audio/mpeg">
+        </audio>
+    </div>
     <div class="shopping-cart-list"><h1>รายการตะกร้าสินค้า</h1></div>
     <table class="product-table" >
         <tbody>
@@ -48,7 +53,6 @@
                     </div>
                     <br>
                 </td>
-                
                 <td >
                     <div class="name-product">
                     <p>{{name}}</p>
@@ -67,10 +71,9 @@
                 </td>
                 <td>
                     <a href="/product_item_delete/{{code}}">
-                        <input class="del-product" type="submit" value="ลบ">
+                    <input class="del-product" type="submit" value="ลบ">
                     </a>
                 </td>
-                
             {% endfor %}
             </tr>
         </tbody>
@@ -81,7 +84,17 @@
         </h1>
         <input type="submit" value="ชำระเงิน">
     </div>
+
     {% else: %}
-    <div class="shopping-cart-list"><h1>ไม่มีรายการตะกร้าสินค้า</h1></div>
+    <div class="none-product">
+        <h1>ยังไม่มีรายการสินค้า</h1>
+        <img src="{{url_for('static',filename='../static/images/accessory/ผีเสือ.png')}}">
+    </div>
+    <div class="song">
+        <audio autoplay controlsList="nodownload">
+            <source src="{{url_for('static',filename='../static/sounds/あなたの夜が明けるまで 傘村トータ cover.mp3')}}" type="audio/mpeg">
+        </audio>
+    </div>
     {% endif %}
+    
 {% endblock %}

@@ -1,6 +1,7 @@
+from email.policy import default
 import MySQLdb
 from django.shortcuts import redirect
-from flask import Flask, flash, render_template, request, redirect, url_for , session
+from flask import Flask, flash, render_template, request, redirect, send_file, url_for , session
 from flask_mysqldb import MySQL
 import re
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -177,7 +178,7 @@ def add_product():
 
   process_product_item()  # เรียกฟังชัน process_product_items เพื่อคำนวนณราคารวม และ หา product suggestion
   session.modified = True  # ให้ทำการเปลี่ยนแปลงค่าใน session แบบถาวร
-  return render_template('shopping_cart.html')
+  return ('', 204)
 
 def process_product_item():
     if 'product_items' in session:
@@ -300,12 +301,13 @@ def get_product_dict():
 def delete_product_from_product_items(code):
   try:
     # pop ใช้ ลบค่าจาก dictionary
+    # session.pop('product_items')
     session['product_items'].pop(code, None)
     process_product_item()  # จำนวนสินค้าหายไปดังนั้นให้คำนวนจำนวนเงินที่ต้องจ่ายใหม่
-
     return redirect('/shopping_cart')
   except Exception as e:
     print(e)
+
 
 if __name__ == "__main__":
   rules = get_rules(min_support=0.05, min_confidence=0.8)

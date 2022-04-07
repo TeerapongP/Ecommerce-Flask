@@ -134,13 +134,13 @@
 }
 .imge-left img{
   position: absolute;
-  left: 1535px;
-  top: 670px
+  left: 1570px;
+  top: 930px
 }
 .imge-right img{
   position: absolute;
   left: 0px;
-  top: 670px
+  top: 930px
 }
 .img-shopping-cart img{
   z-index: 11;
