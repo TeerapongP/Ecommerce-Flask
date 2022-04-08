@@ -51,22 +51,21 @@
 }
 
 .search-bar input[type="text"]{
-    position: fixed;
-    max-width: 100%;
+    position: absolute;
     height: 40px;
-    top: 20px;
-    left: 810px;
-    right: 810px;
+    width: 250px;
+    margin-top: 20px;
+    margin-left: 810px;
     border: none;
     border-radius: 10px;
-    font-size: 22px;
+    font-size: 18px;
     text-align: center;
     color: rgba(0, 0, 0, 0.5);
 }
 .search-bar input[type="submit"]{
-    position: fixed;
-    top: 20px;
-    left: 1100px;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 1070px;
     height: 40px;
     width: 60px;
     border: none;

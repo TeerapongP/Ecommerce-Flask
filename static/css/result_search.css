@@ -94,3 +94,7 @@
   
     color: #ffffff;
   }
+  .product-image img{
+    width: 193px;
+    height: 251px;
+  }
