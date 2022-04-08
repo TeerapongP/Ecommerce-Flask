@@ -9,56 +9,55 @@
     
     <link rel="stylesheet"  type="text/css" href="{{url_for('static',filename='css/navbar.css')}}">
     <script type="text/javascript" src="{{ url_for('static', filename='js/lover.js') }}"></script>
-</head>
- <body>
-    <div class="navbar">
-        <div class="border-nav">
-            <div class="logo">
-                <a href="{{ url_for('index') }}">
-                    <img src="{{url_for('static',filename='../static/images/logo.jpg')}}" alt="">
-                </a>
-            </div>
-            <div class="text-name">
-                <p>Manga Shop Online</p>
-            </div>
-            <form action="/search-items" method="post">
-                <div class="search-bar">
-                    <input type="text" id="search" name="search_item" value="Search" >
-                    <input type="submit" value="ค้นหา">
+    
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="border-nav">
+                <div class="logo">
+                    <a href="{{ url_for('index') }}">
+                        <img src="{{url_for('static',filename='../static/images/logo.jpg')}}" alt="">
+                    </a>
                 </div>
-            </form>
-            <a href="{{ url_for('signin') }}" ><img class="img-user" src="{{url_for('static',filename='../static/images/logo.jpg')}}" alt=""></a>
-            <div class="img-shopping-cart">
-                <a href="/shopping_cart">
-                    <img src="{{url_for('static',filename='images/accessory/shopping-cart.png')}}" alt="">
-                </a>
+                <div class="text-name">
+                    <p>Manga Shop Online</p>
+                </div>
+                <form action="/search-items" method="post">
+                    <div class="search-bar">
+                        <input type="text" id="search" name="search_item" value="Search" >
+                        <input type="submit" value="ค้นหา">
+                    </div>
+                </form>
+                <a href="{{ url_for('signin') }}" ><img class="img-user" src="{{url_for('static',filename='../static/images/logo.jpg')}}" alt=""></a>
+                <div class="img-shopping-cart">
+                    <a href="/shopping_cart">
+                        <img src="{{url_for('static',filename='images/accessory/shopping-cart.png')}}" alt="">
+                    </a>
+                </div>
             </div>
+            
         </div>
+        <div class="navbar-seconds" >
+            <a href="{{ url_for('index') }}">
+            <li>หน้าแรก</li>
+            </a>
+            <a href="{{ url_for('manga_best_seller') }}">
+            <li>ขายดี</li>
+            </a>
+            <a href="{{ url_for('manga_new') }}">
+                <li>มาใหม่</li>
+            </a>
+            <a href="{{ url_for('manga_promotions') }}">
+                <li>โปรโมชั่น</li>
+            </a>
+            <a href="{{ url_for('manga_introduce') }}">
+                <li>แนะนำ</li>
+            </a>
+        </div> 
+        <br><br><br><br>
+        {% block content %}
+    
+        {% endblock %}
         
-    </div>
-    <div class="navbar-seconds" >
-        <a href="{{ url_for('index') }}">
-        <li>หน้าแรก</li>
-        </a>
-        <a href="{{ url_for('manga_best_seller') }}">
-        <li>ขายดี</li>
-        </a>
-        <a href="{{ url_for('manga_new') }}">
-            <li>มาใหม่</li>
-        </a>
-        <a href="{{ url_for('manga_promotions') }}">
-            <li>โปรโมชั่น</li>
-        </a>
-        <a href="{{ url_for('manga_introduce') }}">
-            <li>แนะนำ</li>
-        </a>
-    </div> 
-    <br><br><br><br>
-    {% block content %}
-   
-    {% endblock %}
-    
-</body>
-    
-
+    </body>
 </html>

@@ -52,7 +52,6 @@
 
 .search-bar input[type="text"]{
     position: fixed;
-
     max-width: 100%;
     height: 40px;
     top: 20px;
@@ -60,7 +59,7 @@
     right: 810px;
     border: none;
     border-radius: 10px;
-    font-size: 18px;
+    font-size: 22px;
     text-align: center;
     color: rgba(0, 0, 0, 0.5);
 }

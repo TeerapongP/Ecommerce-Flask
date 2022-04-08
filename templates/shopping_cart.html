@@ -18,14 +18,14 @@
         <p>ผอ รสนิยมดี</p>         
     </div>
     {% endif %}
-    <div class="header"><h1>ตะกร้าสินค้า</h1></div>
-    <div class="line"></div>
-    {% if 'product_items' in session %}
     <div class="song">
         <audio autoplay controlsList="nodownload">
             <source src="{{url_for('static',filename='../static/sounds/あなたの夜が明けるまで 傘村トータ cover.mp3')}}" type="audio/mpeg">
         </audio>
     </div>
+    <div class="header"><h1>ตะกร้าสินค้า</h1></div>
+    <div class="line"></div>
+    {% if 'product_items' in session %}
     <div class="shopping-cart-list"><h1>รายการตะกร้าสินค้า</h1></div>
     <table class="product-table" >
         <tbody>
@@ -90,11 +90,7 @@
         <h1>ยังไม่มีรายการสินค้า</h1>
         <img src="{{url_for('static',filename='../static/images/accessory/ผีเสือ.png')}}">
     </div>
-    <div class="song">
-        <audio autoplay controlsList="nodownload">
-            <source src="{{url_for('static',filename='../static/sounds/あなたの夜が明けるまで 傘村トータ cover.mp3')}}" type="audio/mpeg">
-        </audio>
-    </div>
+   
     {% endif %}
     
 {% endblock %}

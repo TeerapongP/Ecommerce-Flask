@@ -173,9 +173,10 @@ input[type='button']{
 }
 
 .box{
-  width: 1413px;
+  width: 1200px;
   height: 200px;
-  margin-left: 199px;
+  margin-left: 320px;
+  margin-right: 200px;
   margin-top: 10px;
   background: rgba(196, 196, 196, 0.5);
   border-radius: 10px;
@@ -193,8 +194,8 @@ input[type='button']{
 .box input[type="submit"]{
   width: 526px;
   height: 80px;
-  margin-left: 498px;
-  margin-right:398px ;
+  margin-left: 350px;
+
   background: rgba(0, 191, 108, 0.8);
 
   border: none;
