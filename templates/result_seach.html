@@ -1,11 +1,9 @@
-
 {% extends 'navbar.html' %}
-    
 {% block content %}
     <head>
-        <link rel="stylesheet"  type="text/css" href="{{url_for('static',filename='css/manga_promotions.css')}}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet"  type="text/css" href="{{url_for('static',filename='css/result_search.css')}}">
     </head>
-    
     {% if 'loggedin' in session: %}
         <div class="sign-in-text">
             <p>{{ session['username']}}</p> 
@@ -21,11 +19,6 @@
             <p>ผอ รสนิยมดี</p>         
         </div>
     {% endif %}
-    <div class="text-header">
-        <h1>มังงะโปรโมชั่น</h1>
-        <h2>เหลืออีก 365 วัน</h2>
-    </div>
-    <div class="line"></div>
     {% for items in data %}
     <form method="post" action="/add_product">
         <div class="product-item">
@@ -48,24 +41,4 @@
         </div>
     </form>
     {% endfor %}
-   
-    {% for items in items_ %}
-    <div class="product-item">
-        <div class="product-name">
-            <div class="product-image">
-                <img src="{{ url_for('static', filename='/images/products/images/' +items['product_images'] ) }} ">
-            </div>
-            <p>{{items.product_name}}</p>
-            <div class="product-price-sold">
-                <input type="submit" value="{{items.product_price}}">
-            </div>
-        </div>
-    </div>
-    {% endfor %}
-    <div class="imge-left">
-        <img src="{{url_for('static',filename='../static/images/accessory/bg-right.png')}}">
-    </div>
-    <div class="imge-right">
-        <img src="{{url_for('static',filename='../static/images/accessory/bg-left.png')}}">
-    </div> 
 {% endblock %}

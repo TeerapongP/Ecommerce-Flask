@@ -21,11 +21,18 @@
             <div class="text-name">
                 <p>Manga Shop Online</p>
             </div>
-            <div class="search-bar">
-                <input type="text" id="search" name="search" value="Search" >
-            </div>
+            <form action="/search-items" method="post">
+                <div class="search-bar">
+                    <input type="text" id="search" name="search_item" value="Search" >
+                    <input type="submit" value="ค้นหา">
+                </div>
+            </form>
             <a href="{{ url_for('signin') }}" ><img class="img-user" src="{{url_for('static',filename='../static/images/logo.jpg')}}" alt=""></a>
-            
+            <div class="img-shopping-cart">
+                <a href="/shopping_cart">
+                    <img src="{{url_for('static',filename='images/accessory/shopping-cart.png')}}" alt="">
+                </a>
+            </div>
         </div>
         
     </div>

@@ -171,14 +171,7 @@ input[type='button']{
   height: 178.98px;
   margin-right: 50px;
 }
-.img-shopping-cart img{
-  z-index: 11;
-  position: fixed;
-  width: 50px;
-  height: 50px;
-  left: 1820px;
-  top: 15px;
-}
+
 .box{
   width: 1413px;
   height: 200px;

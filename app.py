@@ -72,6 +72,15 @@ def manga_promotions():
 
   return render_template('manga_promotions.html',data = data, items_ = items_)
 
+@app.route('/search-items', methods=['POST'])
+def search_items():
+  cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+  if request.method == 'POST' and 'search_item' in request.form:
+    _search_items = request.form['search_item']
+    likeString = "%" + _search_items + "%"
+    cursor.execute('SELECT * FROM products WHERE product_name LIKE %s', (likeString,))
+    data = cursor.fetchall()
+    return render_template('result_seach.html',data = data)
 
 @app.route("/signin")
 def signin():
