@@ -194,3 +194,7 @@
   color: #000000;
   text-align: center;
 }
+.product-image img{
+  width: 193px;
+  height: 251px;
+}

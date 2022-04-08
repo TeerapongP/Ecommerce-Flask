@@ -163,7 +163,7 @@ def clear_item():
 def add_product():
   _code = request.form['code']
   _name = request.form['name']
-  _price = int(request.form['price'])
+  _price = float(request.form['price'])
   _image = request.form['image']
   _quantity = int(request.form['quantity'])
   # ข้อมูลของแต่ละแถวใน product_items

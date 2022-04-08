@@ -139,3 +139,7 @@ h1{
   padding-top: 10px;
   color: #ffffff;
 }
+.product-image img{
+  width: 193px;
+  height: 251px;
+}
