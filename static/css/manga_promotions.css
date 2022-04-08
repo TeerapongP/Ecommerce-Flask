@@ -32,12 +32,11 @@
   color: #ffffff;
 }
 .logout input[type=button]{
-  position: fixed;
   z-index: 11;
   height: 35px;
   width: 80px;
-  top: 25px;
-  left: 1735px;
+  margin-top: -25px;
+  margin-left: 15px;
   border: none;
 
   border: none;

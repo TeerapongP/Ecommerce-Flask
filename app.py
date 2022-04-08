@@ -11,12 +11,9 @@ from mlxtend.frequent_patterns import fpgrowth
 from tqdm import tqdm
 import pandas as pd
 
-#Yume Nishimiya
 app = Flask(__name__)
 
 app.secret_key = "secret key"
-ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
-
 # Intialize MySQL
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
