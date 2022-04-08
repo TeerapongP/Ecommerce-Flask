@@ -10,7 +10,8 @@ from mlxtend.frequent_patterns import association_rules
 from mlxtend.frequent_patterns import fpgrowth
 from tqdm import tqdm
 import pandas as pd
-
+from werkzeug.utils import secure_filename
+import os
 #Yume Nishimiya
 app = Flask(__name__)
 
