@@ -12,7 +12,8 @@ from tqdm import tqdm
 import pandas as pd
 from werkzeug.utils import secure_filename
 import os
-#Yume Nishimiya
+ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
+
 app = Flask(__name__)
 
 app.secret_key = "secret key"
