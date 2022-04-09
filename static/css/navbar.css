@@ -119,3 +119,10 @@ a:link { text-decoration: none; }
     left: 1820px;
     top: 15px;
   }
+.img-shopping-cart p{
+    z-index: 12;
+    margin-left: 1875px;
+    margin-top: 1px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+}

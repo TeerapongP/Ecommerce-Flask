@@ -32,6 +32,11 @@
                 <div class="img-shopping-cart">
                     <a href="/shopping_cart">
                         <img src="{{url_for('static',filename='images/accessory/shopping-cart.png')}}" alt="">
+                        {% if 'product_items' in session %}
+                            <p>{{session ['product_items']|length}}</p>
+                        {% else: %}
+                            <p>0</p>
+                        {% endif %}
                     </a>
                 </div>
             </div>
